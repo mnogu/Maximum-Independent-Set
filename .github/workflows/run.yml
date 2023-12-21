@@ -1,0 +1,9 @@
+on: push
+jobs:
+  run_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |   
+          make
+          ./mis datasets/100/graph_100_1000.txt
